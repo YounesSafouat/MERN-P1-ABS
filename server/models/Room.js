@@ -11,6 +11,7 @@ const roomSchema = new mongoose.Schema({
   members: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
+    require: [true, "the name is required"]
   },
   isPrivate : {
      type :Boolean,
